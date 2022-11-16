@@ -65,7 +65,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 public function index()
     {
-##create html
+## create html
         $html = '<table class="table">
         <tr>
             <td><label>  श्री  रोहित गौतम: <span>*</span></label></td>
