@@ -48,9 +48,9 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[Lendio](https://lendio.com)**
 ## installation 
  composer require carlos-meneses/laravel-mpdf
- ##enter providers in config/app.php
+ ## enter providers in config/app.php
  Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class,
- ##enter aliases in config/app.php
+ ## enter aliases in config/app.php
  'PDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class,
  ## publish package
  php artisan vendor:publish --tag=mpdf-config
