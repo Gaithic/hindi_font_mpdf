@@ -65,7 +65,6 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 public function index()
     {
-## create html
         $html = '<table class="table">
         <tr>
             <td><label>  श्री  रोहित गौतम: <span>*</span></label></td>
@@ -90,8 +89,14 @@ public function index()
         **$mpdf = new \Mpdf\Mpdf()**
 
         $mpdf->autoScriptToLang = true;
+
+
         $mpdf->baseScript = 1;
+
+
         $mpdf->autoVietnamese = true;
+
+
         $mpdf->autoArabic = true;
 
         $mpdf->autoLangToFont = true;
@@ -102,8 +107,6 @@ public function index()
 
         exit;
     }
-
- ## end 
  
 ## Contributing
 
