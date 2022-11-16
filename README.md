@@ -63,8 +63,9 @@ We would like to extend our thanks to the following sponsors for funding Laravel
  
 ## create public function
 
-  public function index()
+**public function index()
     {
+
         $html = '<table class="table">
         <tr>
             <td><label>  श्री  रोहित गौतम: <span>*</span></label></td>
@@ -85,8 +86,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
             <td><label> कैलाश यात्रा <span>*</span></label></td>
 
         </tr>
-        </table>';
-        $mpdf = new \Mpdf\Mpdf();
+        </table>';**
+        **$mpdf = new \Mpdf\Mpdf()**
 
         $mpdf->autoScriptToLang = true;
         $mpdf->baseScript = 1;
