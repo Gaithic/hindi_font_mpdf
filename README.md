@@ -57,8 +57,12 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
  ## create controller and create public function inside controller class like:
  <?php
+
+## use namespace 
  use PDF;
  
+## create public function
+
   public function index()
     {
         $html = '<table class="table">
@@ -97,7 +101,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
         exit;
     }
- 
+
+ ## end 
  
 ## Contributing
 
