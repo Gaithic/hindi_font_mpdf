@@ -46,7 +46,59 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[OP.GG](https://op.gg)**
 - **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
 - **[Lendio](https://lendio.com)**
+## installation 
+ composer require carlos-meneses/laravel-mpdf
+ ##enter providers in config/app.php
+ Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class,
+ ##enter aliases in config/app.php
+ 'PDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class,
+ ## publish package
+ php artisan vendor:publish --tag=mpdf-config
 
+ ## create controller and create public function inside controller class like:
+ <?php
+ use PDF;
+ 
+  public function index()
+    {
+        $html = '<table class="table">
+        <tr>
+            <td><label>  श्री  रोहित गौतम: <span>*</span></label></td>
+
+        </tr>
+        <tr>
+            <td><label>  श्री आवेदक का नाम  <span>*</span></label></td>
+        </tr>
+        <tr>
+            <td><label>  कैलाश के <span>*</span></label></td>
+
+        </tr>
+        <tr>
+            <td><label>स्थाई निवासी <span>*</span></label></td>
+
+        </tr>
+        <tr>
+            <td><label> कैलाश यात्रा <span>*</span></label></td>
+
+        </tr>
+        </table>';
+        $mpdf = new \Mpdf\Mpdf();
+
+        $mpdf->autoScriptToLang = true;
+        $mpdf->baseScript = 1;
+        $mpdf->autoVietnamese = true;
+        $mpdf->autoArabic = true;
+
+        $mpdf->autoLangToFont = true;
+
+        $mpdf->WriteHTML($html);
+
+        $mpdf->Output();
+
+        exit;
+    }
+ 
+ 
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
